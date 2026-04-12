@@ -63,7 +63,7 @@ public class MortgageCalculator {
     }
     //Monthly interest rate (i)
     static double monthlyInterestRate(double annualInterestRate) {
-        return (annualInterestRate / 12) * 100; //1 year = 12 months
+        return annualInterestRate / 12; //1 year = 12 months
     }
     //Calculates the monthly payment
         // M = P × (i * (1 + i)^n / ( (1 + i)^n ) - 1)
