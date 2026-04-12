@@ -14,9 +14,14 @@ public class MortgageCalculator {
         System.out.println("What is your first and last name? ");
         String userName = scanner.nextLine();
         //Make a prompt that asks the total amount of the loan/Principal (P)
+        System.out.println("What is the total amount of the loan? ");
+        double userPrincipalAmount = scanner.nextDouble();
         //Make a prompt that asks how much is the annual interest rate (r)
+        System.out.println("How much is the annual interest rate? ");
+        double userAnnualInterestRate = scanner.nextDouble();
             //Annual Interest rate will be 0.07625 by default
         //Ask the user how much loan terms in years (y)
+
         //Ask the user how much is the monthly payments (n)
             //12(because 12 months = 1 year) * y
         //Ask the user how much is the monthly interest Rate (i)
