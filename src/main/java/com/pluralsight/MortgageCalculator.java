@@ -1,12 +1,18 @@
 package com.pluralsight;
 
+import java.util.Scanner;
+
 public class MortgageCalculator {
     static void main() {
         //Instantiate Scanner
+        Scanner scanner = new Scanner(System.in);
         //Declare and Assign Variables
-
+        double total = 0;
         //Prompt:Greeting
+        System.out.println("Hello! Welcome to the Mortgage Calculator.");
         //Make a prompt that asks the first and last name of the client
+        System.out.println("What is your first and last name? ");
+        String userName = scanner.nextLine();
         //Make a prompt that asks the total amount of the loan/Principal (P)
         //Make a prompt that asks how much is the annual interest rate (r)
             //Annual Interest rate will be 0.07625 by default
