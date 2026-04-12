@@ -1,17 +1,24 @@
 package com.pluralsight;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MortgageCalculator {
     static void main() {
-                            //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+        //Instantiate Scanner
+        //Declare and Assign Variables
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+        //Prompt:Greeting
+        //Make a prompt that asks the first and last name of the client
+        //Make a prompt that asks the total amount of the loan/Principal (P)
+        //Make a prompt that asks how much is the annual interest rate (r)
+            //Annual Interest rate will be 0.07625 by default
+        //Ask the user how much loan terms in years (y)
+        //Ask the user how much is the monthly payments (n)
+            //12(because 12 months = 1 year) * y
+        //Ask the user how much is the monthly interest Rate (i)
     }
+    //Create a method that calculates the monthly payment
+        // M = P × (i * (1 + i)^n / ( (1 + i)^n ) - 1)
+    //Create a method that calculates the annual interest rate
+        //Total interest = (M * n) - P
+    //Create a method that displays the expected monthly payment
+    // and the total interest paid
 }
