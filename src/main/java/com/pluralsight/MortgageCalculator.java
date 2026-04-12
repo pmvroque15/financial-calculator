@@ -21,10 +21,12 @@ public class MortgageCalculator {
         double userAnnualInterestRate = scanner.nextDouble();
             //Annual Interest rate will be 0.07625 by default
         //Ask the user how much loan terms in years (y)
-
-        //Ask the user how much is the monthly payments (n)
-            //12(because 12 months = 1 year) * y
-        //Ask the user how much is the monthly interest Rate (i)
+        System.out.println("How much loan terms in years? ");
+        double userLoanTermYears = scanner.nextDouble();
+        //Monthly payment will be passing through a method and display it here
+        System.out.println("Number of monthly payments: " + "monthly payment answer here");
+        //A method that will be called to calculate monthly interest Rate (i)
+        System.out.println("Your Monthly Interest Rate: $" + "MIR here");
     }
     //Create a method that calculates the monthly payment
         // M = P × (i * (1 + i)^n / ( (1 + i)^n ) - 1)
@@ -32,4 +34,8 @@ public class MortgageCalculator {
         //Total interest = (M * n) - P
     //Create a method that displays the expected monthly payment
     // and the total interest paid
+    //Create a method that converts percent to double
+    //create a method that converts monthly payments
+        //12 * y
+
 }
