@@ -3,7 +3,7 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class MortgageCalculator {
-    static void main() {
+    static void main(String[] args) {
         //Instantiate Scanner
         Scanner scanner = new Scanner(System.in);
         //Declare and Assign Variables
@@ -59,7 +59,7 @@ public class MortgageCalculator {
     //create a method that converts monthly payments (n)
         //12 * y
     static double numberOfMonthlyPayments(double loanTermInYears) {
-        return (double) Math.round((12 * loanTermInYears) * 100) / 100;
+        return 12 * loanTermInYears;
     }
     //Monthly interest rate (i)
     static double monthlyInterestRate(double annualInterestRate) {
