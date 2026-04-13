@@ -25,14 +25,16 @@ public class FutureValue {
         double userNumberOfYears = scanner.nextDouble();
 
         //Days Per Year: Daily compounding assumes 365 days per year
-            //Call a method that converts years to days
-        double futureValueTotal = futureValue(userPrincipalAmount, userAnnualInterestRate, userNumberOfYears);
-        // It would accept the deposit, interest rate, and number of years from the user
-        // It would display the future value and the total interest earned
-        //Display Total Number of Days:
+            //Display Total Number of Days:
                 // - This is 365 × t (because there are 365 days per year).
+        double userYearToDays = yearsToDays(userNumberOfYears);
+        double futureValueTotal = futureValue(userPrincipalAmount, userAnnualInterestRate, userNumberOfYears);
+            // It would accept the deposit, interest rate, and number of years from the user
+            // It would display the future value and the total interest earned
+
         //Display Interest Earned
         System.out.println(futureValueTotal);
+        System.out.println(userYearToDays);
     }
     //Method that would calculate the Future Value
         // FV = P × (1 + (r / 365))^(365 × t)
@@ -46,8 +48,11 @@ public class FutureValue {
     }
 
     static double percentToDecimal(double percent) {
-        return (percent / 100)
+        return (percent / 100);
     }
     //Method that converts years to days
         //365 × t
+    static double yearsToDays(double numberOfYears) {
+        return 365 * numberOfYears; // 1 year = 365 days
+    }
 }
