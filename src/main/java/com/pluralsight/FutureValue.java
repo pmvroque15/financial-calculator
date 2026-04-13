@@ -19,6 +19,7 @@ public class FutureValue {
         //Asking for Annual Interest Rate (r): The nominal annual interest rate in decimal form.
         System.out.println("Annual Interest Rate:");
         double userAnnualInterestRate = scanner.nextDouble();
+        userAnnualInterestRate = percentToDecimal(userAnnualInterestRate);
         //Asking for Number of Years (t): The total number of years the deposit will earn interest.
         System.out.println("Enter how many years you plan to leave the money in the account: ");
         double userNumberOfYears = scanner.nextDouble();
@@ -42,6 +43,10 @@ public class FutureValue {
                         (annualInterestRate / yearToDays),
                         (yearToDays * numberOfYears)
                 )));
+    }
+
+    static double percentToDecimal(double percent) {
+        return (percent / 100)
     }
     //Method that converts years to days
         //365 × t
