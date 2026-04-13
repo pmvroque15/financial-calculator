@@ -22,19 +22,26 @@ public class FutureValue {
         //Asking for Number of Years (t): The total number of years the deposit will earn interest.
         System.out.println("Enter how many years you plan to leave the money in the account: ");
         double userNumberOfYears = scanner.nextDouble();
+
         //Days Per Year: Daily compounding assumes 365 days per year
             //Call a method that converts years to days
+        double futureValueTotal = futureValue(userPrincipalAmount, userAnnualInterestRate, userNumberOfYears);
         // It would accept the deposit, interest rate, and number of years from the user
         // It would display the future value and the total interest earned
         //Display Total Number of Days:
                 // - This is 365 × t (because there are 365 days per year).
-        //Disply Interest Earned
+        //Display Interest Earned
+        System.out.println(futureValueTotal);
     }
     //Method that would calculate the Future Value
         // FV = P × (1 + (r / 365))^(365 × t)
     static double futureValue(double principal, double annualInterestRate, double numberOfYears) {
         double yearToDays = 365;
-        return (principal * (1 + Math.pow((annualInterestRate / yearToDays), (yearToDays * numberOfYears))));
+        return (principal *
+                (1 + Math.pow(
+                        (annualInterestRate / yearToDays),
+                        (yearToDays * numberOfYears)
+                )));
     }
     //Method that converts years to days
         //365 × t
