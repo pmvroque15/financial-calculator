@@ -12,13 +12,13 @@ public class FutureValue {
         System.out.println("Hello! Welcome to the Future Value calculator");
         System.out.println("----------------------------------------------");
         //prompt asks the user's name
-        System.out.println("Type your first and last name:");
+        System.out.println("Type your first and last name: ");
         String userName = scanner.nextLine();
         //Asking for Principal (P): This is the initial deposit amount
-        System.out.println("What is the initial deposit amount");
+        System.out.println("What is the initial deposit amount? ");
         double userPrincipalAmount = scanner.nextDouble();
         //Asking for Annual Interest Rate (r): The nominal annual interest rate in decimal form.
-        System.out.println("Annual Interest Rate:");
+        System.out.println("Annual Interest Rate: ");
         double userAnnualInterestRate = scanner.nextDouble();
         userAnnualInterestRate = percentToDecimal(userAnnualInterestRate);
         //Asking for Number of Years (t): The total number of years the deposit will earn interest.
@@ -29,6 +29,10 @@ public class FutureValue {
             //Display Total Number of Days:
                 // - This is 365 × t (because there are 365 days per year).
         System.out.printf("Hey %s!\n", userName);
+        System.out.println("-------------------------");
+        System.out.printf("Principal Amount: $%.2f\n", userPrincipalAmount);
+        System.out.printf("Annual Interest Rate %.4f\n", userAnnualInterestRate);
+        System.out.printf("Total number of years: %s years\n",  (int)userNumberOfYears);
         System.out.println("-------------------------");
         double userYearToDays = yearsToDays(userNumberOfYears);
         double futureValueTotal = futureValue(userPrincipalAmount, userAnnualInterestRate, userNumberOfYears);
