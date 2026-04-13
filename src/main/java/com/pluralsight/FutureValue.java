@@ -6,7 +6,8 @@ public class FutureValue {
     static void main(String[] args) {
         // Instantiate scanner
         Scanner scanner = new Scanner(System.in);
-        // Declare Variables
+
+        // It would accept the deposit, interest rate, and number of years from the user
         //Make a greeting prompt
         System.out.println("Hello! Welcome to the Future Value calculator");
         System.out.println("----------------------------------------------");
@@ -23,18 +24,20 @@ public class FutureValue {
         //Asking for Number of Years (t): The total number of years the deposit will earn interest.
         System.out.println("Enter how many years you plan to leave the money in the account: ");
         double userNumberOfYears = scanner.nextDouble();
-
+        System.out.println(" ");
         //Days Per Year: Daily compounding assumes 365 days per year
             //Display Total Number of Days:
                 // - This is 365 × t (because there are 365 days per year).
+        System.out.printf("Hey %s!\n", userName);
+        System.out.println("-------------------------");
         double userYearToDays = yearsToDays(userNumberOfYears);
         double futureValueTotal = futureValue(userPrincipalAmount, userAnnualInterestRate, userNumberOfYears);
-            // It would accept the deposit, interest rate, and number of years from the user
-            // It would display the future value and the total interest earned
+        double userTotalInterestEarned = totalInterestEarned(futureValueTotal, userPrincipalAmount);
+        // It would display the future value and the total interest earned
+        System.out.printf("Future Value: $%.2f\n", futureValueTotal);
+        System.out.printf("Total Interest Earned: $%.2f\n", userTotalInterestEarned);
+        System.out.printf("Total Number of Days: %s days\n", (int)userYearToDays);
 
-        //Display Interest Earned
-        System.out.println(futureValueTotal);
-        System.out.println(userYearToDays);
     }
     //Method that would calculate the Future Value
         // FV = P × (1 + (r / 365))^(365 × t)
@@ -52,5 +55,9 @@ public class FutureValue {
         //365 × t
     static double yearsToDays(double numberOfYears) {
         return 365 * numberOfYears; // 1 year = 365 days
+    }
+    // Total Interest Earned = FV - P
+    static double totalInterestEarned(double futureValue, double principal) {
+        return futureValue - principal;
     }
 }
