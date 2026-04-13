@@ -40,11 +40,9 @@ public class FutureValue {
         // FV = P × (1 + (r / 365))^(365 × t)
     static double futureValue(double principal, double annualInterestRate, double numberOfYears) {
         double yearToDays = 365;
+        double exponent = (yearToDays * numberOfYears);
         return (principal *
-                (1 + Math.pow(
-                        (annualInterestRate / yearToDays),
-                        (yearToDays * numberOfYears)
-                )));
+                Math.pow((1 + (annualInterestRate / yearToDays)), exponent));
     }
 
     static double percentToDecimal(double percent) {
